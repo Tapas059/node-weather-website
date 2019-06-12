@@ -10,7 +10,7 @@ const foreCast= (latitude ,longitude , callback)=>{
         }else if(!body.daily){
               callback("Unable to find Location......", undefined)
         }else{
-              callback(undefined , body.daily.data[0].summary + " There is currently "+ body.currently.temperature  + "  There is "+ body.currently.cloudCover +"% chances of rainning")
+              callback(undefined , body.daily.data[0].summary + " There is currently "+ body.currently.temperature  + " degree temperature  There is "+ body.currently.cloudCover +"% chances of rainning")
         }
     })
 }
