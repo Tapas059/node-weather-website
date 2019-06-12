@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const geoCode = require('./utils/geoCode.js')
 const foreCast = require('./utils/foreCast.js')
 const app = express();
-
+const port = process.env.PORT || 3000
 
 const partialpath = path.join(__dirname, "../templates/partials");
 hbs.registerPartials(partialpath);
@@ -131,6 +131,6 @@ app.get('*' , (req ,res)=>{
 })
 
 
-app.listen(3000, () =>{
-    console.log("port is listening at 3000 port number.....")
+app.listen(port, () =>{
+    console.log("port is listening at "+port +" port number.....")
 })
